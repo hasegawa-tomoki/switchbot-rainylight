@@ -2,11 +2,13 @@ name: run_script
 on:
   push:
   schedule:
-    - cron: "24 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: cron
 
     steps:
       - uses: actions/checkout@v2
