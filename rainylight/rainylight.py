@@ -115,8 +115,8 @@ def main():
 
     if rain == 0:
         turn_on_light(DEVICE_ID, (255, 127, 0))
-    elif rain <= 20:
-        turn_on_light(DEVICE_ID, (255, 255, 0))
+    elif rain <= 20:FFECB3
+        turn_on_light(DEVICE_ID, (0xFF, 0xEC, 0xB3))
     elif rain <= 40:
         turn_on_light(DEVICE_ID, (127, 255, 0))
     elif rain <= 60:
