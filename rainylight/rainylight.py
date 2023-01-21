@@ -112,19 +112,19 @@ def main():
 
     rain = get_pm_rainy_percent()
     logger.info(rain)
-
+    
     if rain == 0:
-        turn_on_light(DEVICE_ID, (255, 127, 0))
+        turn_on_light(DEVICE_ID, (0xFF, 0xFF, 0xFF))
     elif rain <= 20:
-        turn_on_light(DEVICE_ID, (0xFF, 0xEC, 0xB3))
+        turn_on_light(DEVICE_ID, (0x90, 0xCA, 0xF9))
     elif rain <= 40:
-        turn_on_light(DEVICE_ID, (127, 255, 0))
+        turn_on_light(DEVICE_ID, (0x42, 0xA5, 0xF5))
     elif rain <= 60:
-        turn_on_light(DEVICE_ID, (0, 255, 255))
+        turn_on_light(DEVICE_ID, (0x1E, 0x88, 0xE5))
     elif rain <= 80:
-        turn_on_light(DEVICE_ID, (0, 127, 255))
+        turn_on_light(DEVICE_ID, (0x15, 0x65, 0xC0))
     else:
-        turn_on_light(DEVICE_ID, (0, 0, 255))
+        turn_on_light(DEVICE_ID, (0x0D, 0x47, 0xA1))
 
     return True
 
